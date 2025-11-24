@@ -1,0 +1,225 @@
+.leaderboard-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.leaderboard-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.leaderboard-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  transform: translateX(-5px) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+}
+
+.back-arrow {
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover .back-arrow {
+  transform: translateX(-3px);
+}
+
+/* Loading and Empty States */
+.loading-state,
+.empty-leaderboard {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 1.1em;
+}
+
+.go-to-friends-button {
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(79, 172, 254, 0.3);
+}
+
+.go-to-friends-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(79, 172, 254, 0.4);
+  background: linear-gradient(135deg, #3d9be8 0%, #00d9e8 100%);
+}
+
+/* Leaderboard Table */
+.leaderboard-content {
+  margin-top: 2rem;
+}
+
+.leaderboard-table-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table thead {
+  background: #f8f9fa;
+  border-bottom: 2px solid #667eea;
+}
+
+.leaderboard-table th {
+  padding: 1.25rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #000000;
+}
+
+.leaderboard-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.leaderboard-table tbody tr.current-user-row {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-left: 4px solid #667eea;
+  font-weight: 600;
+}
+
+.leaderboard-table tbody tr.current-user-row:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+}
+
+.leaderboard-table td {
+  padding: 1.25rem 1rem;
+  color: #333;
+}
+
+.rank-cell {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.rank-icon {
+  display: inline-block;
+  min-width: 50px;
+}
+
+.user-cell {
+  font-weight: 500;
+}
+
+.user-email {
+  color: #333;
+}
+
+.you-badge {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.budget-cell,
+.spent-cell {
+  color: #555;
+  font-weight: 500;
+}
+
+.difference-cell {
+  font-weight: 600;
+}
+
+.difference-cell.positive {
+  color: #11998e;
+}
+
+.difference-cell.negative {
+  color: #ff6b6b;
+}
+
+/* Leaderboard Info */
+.leaderboard-info {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.info-text {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.info-text strong {
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leaderboard-table-container {
+    overflow-x: auto;
+  }
+
+  .leaderboard-table {
+    min-width: 600px;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9em;
+  }
+}
+

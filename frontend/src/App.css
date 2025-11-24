@@ -1,0 +1,402 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 2.75rem);
+}
+
+.dashboard-content {
+  width: min(1120px, 100%);
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+  color: #1f2937;
+}
+
+.dashboard-content h1 {
+  text-align: center;
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-content > p {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 720px;
+  line-height: 1.7;
+  color: #475467;
+}
+
+.goal-status-section {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.goal-status-section h2 {
+  margin: 0 0 0.5rem;
+}
+
+.goal-status-section p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.goal-met {
+  color: #16a34a;
+}
+
+.goal-exceeded {
+  color: #e11d48;
+}
+
+/* Instructions Section Styles */
+.instructions-section {
+  margin: 1rem 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.instructions-section h2 {
+  color: #ffffff;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.instruction-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid;
+}
+
+.instruction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.12);
+}
+
+.instruction-card:first-of-type {
+  border-left-color: #5f259f;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f4ff 100%);
+}
+
+.instruction-card:last-of-type {
+  border-left-color: #00baf2;
+  background: linear-gradient(135deg, #ffffff 0%, #e6f7ff 100%);
+}
+
+.instruction-card h3 {
+  color: #333;
+  font-size: 1.35em;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.instruction-card:first-of-type h3 {
+  color: #5f259f;
+}
+
+.instruction-card:last-of-type h3 {
+  color: #00baf2;
+}
+
+.instruction-card ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.instruction-card li {
+  margin-bottom: 0.65rem;
+  font-size: 1rem;
+}
+
+.instruction-card li::marker {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.instruction-card:first-of-type li::marker {
+  color: #5f259f;
+}
+
+.instruction-card:last-of-type li::marker {
+  color: #00baf2;
+}
+
+.instruction-note {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  border-left: 4px solid #ffc107;
+  color: #856404;
+  font-size: 0.95em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instruction-note strong {
+  color: #f57c00;
+}
+
+/* Navigation Buttons */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  flex-wrap: wrap;
+}
+
+.nav-home-button,
+.nav-logout-button {
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  flex: 0 0 auto;
+  min-width: 120px;
+}
+
+.nav-home-button {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 8px 16px rgba(79, 172, 254, 0.3);
+}
+
+.nav-logout-button {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  box-shadow: 0 8px 16px rgba(250, 112, 154, 0.3);
+}
+
+.nav-home-button:hover,
+.nav-logout-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Login page */
+.login-page {
+  min-height: 70vh;
+  width: min(480px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login-page h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  color: #1f2937;
+}
+
+.login-page p {
+  margin: 0;
+  color: #475467;
+}
+
+.login-page button {
+  margin-top: 0.5rem;
+}
+
+/* Summary Button */
+.summary-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 220px;
+}
+
+.summary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(102, 126, 234, 0.45);
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+}
+
+/* Dashboard Actions */
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.friends-button,
+.leaderboard-button {
+  border: none;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+}
+
+.friends-button {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 8px 18px rgba(79, 172, 254, 0.35);
+}
+
+.leaderboard-button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 8px 18px rgba(240, 147, 251, 0.35);
+}
+
+.friends-button:hover,
+.leaderboard-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Upload PDF Section */
+.upload-pdf-section {
+  margin: 1rem 0;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 20px;
+  box-shadow: 0 16px 32px rgba(244, 114, 182, 0.35);
+
+  text-align: center;
+}
+
+.upload-pdf-section h2 {
+  color: #ffffff;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.upload-pdf-section input[type="file"] {
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: min(100%, 420px);
+}
+
+.upload-pdf-section input[type="file"]:hover {
+  background: white;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.pdf-password-input {
+  margin: 0.5rem auto 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.97);
+  font-size: 1rem;
+  width: min(100%, 360px);
+  transition: all 0.3s ease;
+}
+
+.pdf-password-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 1);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.upload-pdf-button {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(17, 153, 142, 0.35);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: min(100%, 300px);
+}
+
+.upload-pdf-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 30px rgba(17, 153, 142, 0.45);
+}
+
+.upload-pdf-button:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-home-button,
+  .nav-logout-button {
+    width: 100%;
+  }
+
+  .dashboard-content {
+    padding: 0;
+  }
+
+  .instructions-section,
+  .upload-pdf-section {
+    padding: 1.25rem;
+  }
+
+  .instruction-card {
+    padding: 1rem;
+  }
+
+  .dashboard-actions {
+    grid-template-columns: 1fr;
+  }
+}

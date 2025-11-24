@@ -1,0 +1,308 @@
+.friends-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.friends-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  transform: translateX(-5px) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+}
+
+.back-arrow {
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover .back-arrow {
+  transform: translateX(-3px);
+}
+
+/* Send Request Section */
+.send-request-section {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.send-request-section h2 {
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.friend-request-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.friend-email-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.friend-email-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.send-request-button {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(17, 153, 142, 0.3);
+}
+
+.send-request-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(17, 153, 142, 0.4);
+  background: linear-gradient(135deg, #0d7a6f 0%, #2dd469 100%);
+}
+
+.send-request-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.message.success {
+  background: rgba(17, 153, 142, 0.2);
+  color: white;
+  border: 1px solid rgba(17, 153, 142, 0.5);
+}
+
+.message.error {
+  background: rgba(255, 107, 107, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 107, 107, 0.5);
+}
+
+/* Requests Section */
+.requests-section {
+  margin-bottom: 2rem;
+}
+
+.requests-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.requests-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.request-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #667eea;
+}
+
+.request-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.request-card.sent {
+  border-left-color: #4facfe;
+}
+
+.request-info {
+  flex: 1;
+}
+
+.request-email {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.request-date {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+
+.request-status {
+  font-size: 0.9em;
+  color: #4facfe;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.request-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.accept-button {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(17, 153, 142, 0.3);
+}
+
+.accept-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(17, 153, 142, 0.4);
+  background: linear-gradient(135deg, #0d7a6f 0%, #2dd469 100%);
+}
+
+.ignore-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+}
+
+.ignore-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(135deg, #ee5a6f 0%, #dc3545 100%);
+}
+
+/* Friends List Section */
+.friends-list-section {
+  margin-bottom: 2rem;
+}
+
+.friends-list-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+  color: #333;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.friends-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.friend-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #11998e;
+}
+
+.friend-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.friend-info {
+  flex: 1;
+}
+
+.friend-email {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.friend-date {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 1.1em;
+}
+
+
+
+
