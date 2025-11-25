@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: backend
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+  - type: web
+    name: frontend
+    rootDir: frontend
+    buildCommand: npm install
+    startCommand: npm start
+
