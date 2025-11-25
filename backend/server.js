@@ -52,10 +52,10 @@ async function uploadPdfToMongoDB(pdfBuffer, filename, userId) {
 }
 
 // Read client_secret from file
-const credentialsPath = path.join(__dirname, 'client_secret_187428957013-97eqd6kdb9tol67u9ddmpf535b18nv7m.apps.googleusercontent.com.json');
-const credentials = JSON.parse(readFileSync(credentialsPath, 'utf8'));
-const GOOGLE_CLIENT_ID = credentials.web.client_id;
-const GOOGLE_CLIENT_SECRET = credentials.web.client_secret;
+// const credentialsPath = path.join(__dirname, 'client_secret_187428957013-97eqd6kdb9tol67u9ddmpf535b18nv7m.apps.googleusercontent.com.json');
+// const credentials = JSON.parse(readFileSync(credentialsPath, 'utf8'));
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const oAuth2Client = new OAuth2Client(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET);
 
 const app = express();
