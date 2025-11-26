@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const MONGODB_CONNECTION_STRING = process.env.MONGODB_URI || "mongodb+srv://superuser:superuser123@cluster0.s3aalbl.mongodb.net/";
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_URI || "mongodb+srv://user:user-password@cluster0.s3aalbl.mongodb.net/";
 const DATABASE_NAME = process.env.DB_NAME || "fintrackr";
 const BUDGET_COLLECTION_NAME = "budgets";
 
